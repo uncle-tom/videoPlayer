@@ -11,14 +11,13 @@ function showAdv(){
       $('.adv__description').html(resp.Adv[i].description);
       $('.adv--close').on("click", function(){
         $('.adv').fadeOut();
-        var advStop = 1;
+        advStop = 1;
         //setTimeout(showAdv,4000)
       })
       $('.adv').on("click", function(){
         $('.adv').fadeOut();
         window.open(resp.Adv[i].href);
-        var advStop = 1;
-        var advCount = 1;
+        advStop = 1;
         //setTimeout(showAdv,4000)
       })
       console.log(advStop);
