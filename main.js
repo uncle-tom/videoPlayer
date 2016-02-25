@@ -1,8 +1,9 @@
 function showAdv(){
 	advCount = 0;
+	HowManyAdv = json.Adv.length;
 	if (advCount == 0) {
 		$('.adv').fadeIn(900);
-		var i = Math.floor(Math.random()*2)
+		var i = Math.floor(Math.random()*HowManyAdv)
 		$('.adv__title').html(json.Adv[i].title);
 		advCount = 1;
 	} 
@@ -12,7 +13,7 @@ setTimeout(showAdv,1000)
 
 $('.adv__close').on("click", function(){
 	$('.adv').fadeOut();
-	setTimeout(showAdv,5000)
+	setTimeout(showAdv,4000)
 })
 
 var json = {
@@ -27,5 +28,3 @@ var json = {
       "href": "http://www.google.com"
 			}]
 };
-
-$('.adv__title').html(json.Adv[0].title)
