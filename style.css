@@ -21,6 +21,7 @@ video {
 }
 .adv:hover {
 	opacity: 1;
+	cursor: pointer;
 }
 
 .adv__close {
