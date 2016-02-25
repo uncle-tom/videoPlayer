@@ -1,30 +1,30 @@
 function showAdv(){
-	advCount = 0;
-	HowManyAdv = json.Adv.length;
-	if (advCount == 0) {
-		$('.adv').fadeIn(900);
-		var i = Math.floor(Math.random()*HowManyAdv)
-		$('.adv__title').html(json.Adv[i].title);
-		advCount = 1;
-	} 
+  advCount = 0;
+  HowManyAdv = json.Adv.length;
+  if (advCount == 0) {
+    $('.adv').fadeIn(900);
+    var i = Math.floor(Math.random()*HowManyAdv)
+    $('.adv__title').html(json.Adv[i].title);
+    advCount = 1;
+  } 
 }
 
 setTimeout(showAdv,1000)
 
 $('.adv__close').on("click", function(){
-	$('.adv').fadeOut();
-	setTimeout(showAdv,4000)
+  $('.adv').fadeOut();
+  setTimeout(showAdv,4000)
 })
 
 var json = {
-	"Adv":[{
-			"title":"Yandex.ru",
-			"description":"Description First Post",
+  "Adv":[{
+      "title":"Yandex.ru",
+      "description":"Description First Post",
       "href": "http://www.ya.ru"
-			},
-		{
-			"title":"Google.com",
-			"description":"Description Second Post",
+      },
+    {
+      "title":"Google.com",
+      "description":"Description Second Post",
       "href": "http://www.google.com"
-			}]
+      }]
 };
