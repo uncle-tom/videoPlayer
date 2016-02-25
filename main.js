@@ -3,8 +3,11 @@ function showAdv(){
   HowManyAdv = json.Adv.length;
   if (advCount == 0) {
     $('.adv').fadeIn(900);
-    var i = Math.floor(Math.random()*HowManyAdv)
-    $('.adv__title').html(json.Adv[i].title);
+    var i = Math.floor(Math.random()*HowManyAdv);
+    $.getJSON('http://constitution.com.ua/ads.json', function(resp){ 
+      $('.adv__title').html(resp.Adv[i].title);
+    })
+    //$('.adv__title').html(json.Adv[i].title);
     advCount = 1;
   } 
 }
